@@ -1,0 +1,22 @@
+{
+  "name": "array-exercises",
+  "version": "1.1.0",
+  "description": "",
+  "main": "test/index.test.js",
+  "module": "main.js",
+  "scripts": {
+    "start": "npx lite-server",
+    "test": "mocha ./test.js"
+  },
+  "keywords": [],
+  "author": "Dan Levy",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "esm": "^3.2.25",
+    "mocha": "^6.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  }
+}
