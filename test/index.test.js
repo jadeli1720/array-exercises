@@ -1,4 +1,7 @@
 /* eslint-env mocha */
+if (typeof exports !== 'undefined') {
+  var chai = require('chai')
+}
 var expect = chai.expect
 
 describe('sum()', function () {
