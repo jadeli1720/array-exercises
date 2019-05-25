@@ -1,6 +1,12 @@
 # Array Exercises
 
-## Instructions
+To solve this challenge, review the `./index.js` file & add code as needed to pass the test.
+
+## Quick Start
+
+[LAUNCH ON CODESANDBOX 🚀](https://codesandbox.io/s/github/LambdaSchool/array-exercises)
+
+## Alternatively: Manual Instructions
 
 1. Fork & clone to your local computer.
 1. Change directory into your newly cloned repo.

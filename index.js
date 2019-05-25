@@ -54,7 +54,7 @@ function makeRange (count, fillString) {
 }
 
 /**
- * @tutorial
+ * @instuction
  * `countByFirstLetter(words): Object`
  * Given an array of words, return an object using *lowercase* letters as keys. The value should be a Number, with the count of words with same starting character.
  *
@@ -70,7 +70,7 @@ function makeRange (count, fillString) {
  * // }
  */
 
-function countByFirstLetter () {
+function countByFirstLetter (words) {
   // TODO: Add your solution here.
 }
 
@@ -93,7 +93,7 @@ function countByFirstLetter () {
  *
  */
 
-function groupByFirstLetter () {
+function groupByFirstLetter (words) {
   // TODO: Add your solution here.
 }
 
