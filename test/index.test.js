@@ -1,5 +1,7 @@
 /* eslint-env mocha */
 if (typeof exports !== 'undefined') {
+  // IGNORE: Test/Env Detection Stuff //
+  // Node/Non-browser test env
   var chai = require('chai')
 }
 var expect = chai.expect
