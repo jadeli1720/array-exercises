@@ -52,3 +52,9 @@ function interleave (list1, list2) {
 function makeRange (count, fillString) {
 
 }
+
+/*
+  Instructions:
+  `groupByFirstLetter(words): Object`
+
+*/
