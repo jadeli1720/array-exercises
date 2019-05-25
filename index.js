@@ -53,8 +53,38 @@ function makeRange (count, fillString) {
 
 }
 
-/*
-  Instructions:
-  `groupByFirstLetter(words): Object`
+/**
+ * @tutorial
+ * `countByFirstLetter(words): Object`
+ * Given an array of words, return an object using *lowercase* letters as keys. The value should be a Number, with the count of words with same starting character.
+ *
+ * @example
+ *
+ * const input = ['cat', 'kitty', 'catzilla', 'fluffykins']
+ * const result = groupByFirstLetter(input)
+ * // result deep equals:
+ * // {
+ * //  c: 2, // cat + catzilla
+ * //  k: 1,
+ * //  f: 1
+ * // }
+ *
+ */
 
-*/
+function groupByFirstLetter() {
+
+}
+
+///////// END OF CHALLENGE /////////
+///////// END OF CHALLENGE /////////
+///////// END OF CHALLENGE /////////
+
+// IGNORE: Test/Env Detection Stuff //
+if (typeof exports !== 'undefined') {
+  // Node/Non-browser test env
+  module.exports = { sum, doubleCharacters,
+    doubleNumbers,
+    backwardsify,
+    interleave, makeRange, groupByFirstLetter}
+}
+
