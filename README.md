@@ -4,7 +4,7 @@ To solve this challenge, review the `./index.js` file & add code as needed to pa
 
 ## Quick Start
 
-[LAUNCH ON CODESANDBOX 🚀](https://codesandbox.io/s/github/LambdaSchool/array-exercises)
+[LAUNCH ON CODESANDBOX 🚀](https://codesandbox.io/s/github/LambdaSchool/array-exercises?previewwindow=tests)
 
 ## Alternatively: Manual Instructions
 
