@@ -3,6 +3,16 @@ if (typeof exports !== 'undefined') {
   // IGNORE: Test/Env Detection Stuff //
   // Node/Non-browser test env
   var chai = require('chai')
+  var {
+    sum,
+    doubleCharacters,
+    doubleNumbers,
+    backwardsify,
+    interleave,
+    makeRange,
+    countByFirstLetter,
+    groupByFirstLetter
+  } = require('../index.js')
 }
 var expect = chai.expect
 
@@ -94,3 +104,48 @@ describe('makeRange()', function () {
     expect(makeRange(7, 'z')).to.deep.eq(['z', 'z', 'z', 'z', 'z', 'z', 'z'])
   })
 })
+
+describe('countByFirstLetter()', function () {
+  const input = ['cat', 'kitty', 'catzilla', 'fluffykins']
+  const expected = {
+    c: 2,
+    k: 1,
+    f: 1
+  }
+
+  it('countByFirstLetter() method exists', function () { expect(countByFirstLetter).to.exist })
+
+  it('when the input is not object, or has no keys, return empty array', function () {
+    expect(countByFirstLetter([])).to.deep.eq([])
+  })
+
+  it('creates an object to count words by first letter', function () {
+    expect(countByFirstLetter(input)).to.deep.eq(expected)
+  })
+})
+
+describe('groupByFirstLetter()', function () {
+  const input = ['cat', 'kitty', 'catzilla', 'fluffykins']
+  const expected = {
+    c: ['cat', 'catzilla'],
+    k: ['kitty'],
+    f: ['fluffykins']
+  }
+
+  it('groupByFirstLetter() method exists', function () { expect(groupByFirstLetter).to.exist })
+
+  it('when the input array is empty, return empty array', function () {
+    expect(groupByFirstLetter([])).to.deep.eq([])
+  })
+  it('when the input is non-object, return empty array', function () {
+    expect(groupByFirstLetter('nope')).to.deep.eq([])
+  })
+  it('when the input is null, return empty array', function () {
+    expect(groupByFirstLetter(null)).to.deep.eq([])
+  })
+
+  it('creates an object to count words by first letter', function () {
+    expect(groupByFirstLetter(input)).to.deep.eq(expected)
+  })
+})
+
