@@ -5,7 +5,7 @@
  * Given an array of numbers, return a sum total of all the numbers.
  */
 function sum (numbers) {
-
+  return numbers.reduce((acc, num) => acc + num, 0)
 }
 
 /**
