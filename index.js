@@ -1,11 +1,29 @@
+/*
+* 3 Methods of dealing with arrays are included below:
+*/
 
-/**
- * @instructions
- * `sum(numbers): Number`
- * Given an array of numbers, return a sum total of all the numbers.
- */
+// Basic mode: for-loop
 function sum (numbers) {
-  // TODO: Add your solution here.
+  let total = 0
+  for (let i = 0; i < numbers.length; i++) {
+    total = total + numbers[i]
+  }
+  return total
+}
+
+// Medium: Array Methods (.reduce)
+function sum (numbers) {
+  return numbers.reduce((total, num) => total + num, 0)
+}
+
+// Hard mode: recursion
+function sum (numbers, total = 0) {
+  if (!Array.isArray(numbers)) return 0
+  if (numbers.length === 0) return total
+  if (numbers.length >= 1) {
+    total = total + numbers.pop()
+    return sum(numbers, total)
+  }
 }
 
 /**
