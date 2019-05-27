@@ -67,7 +67,7 @@ describe('doubleCharacters()', () => {
 
   it('doubles each letter from input string', () => {
     expect(doubleCharacters('abc')).to.eq('aabbcc')
-    expect(doubleCharacters('xyzpdq')).to.eq('xxyyzzppddqq')
+    expect(doubleCharacters('xyza')).to.eq('xxyyzzaa')
   })
 })
 
@@ -100,8 +100,8 @@ describe('makeRange()', () => {
   })
 
   it('creates an array of the specified length with the specified initial string', () => {
-    expect(makeRange(4, 'a')).to.deep.eq(['a', 'a', 'a', 'a'])
-    expect(makeRange(7, 'z')).to.deep.eq(['z', 'z', 'z', 'z', 'z', 'z', 'z'])
+    expect(makeRange(3, 'a')).to.deep.eq(['a', 'a', 'a'])
+    expect(makeRange(5, 'z')).to.deep.eq(['z', 'z', 'z', 'z', 'z'])
   })
 })
 
@@ -115,8 +115,8 @@ describe('countByFirstLetter()', () => {
 
   it('countByFirstLetter() method exists', () => { expect(countByFirstLetter).to.exist })
 
-  it('when the input is not object, or has no keys, return empty array', () => {
-    expect(countByFirstLetter([])).to.deep.eq([])
+  it('when the input is not object, or has no keys, return empty object', () => {
+    expect(countByFirstLetter([])).to.deep.eq({})
   })
 
   it('creates an object to count words by first letter', () => {
@@ -133,12 +133,12 @@ describe('groupByFirstLetter()', () => {
   }
 
   it('groupByFirstLetter() method exists', () => { expect(groupByFirstLetter).to.exist })
-  it('when the input array is empty, return empty array', () => expect(groupByFirstLetter([]))
-    .to.deep.eq([]))
-  it('when the input is non-object, return empty array', () => expect(groupByFirstLetter('nope'))
-    .to.deep.eq([]))
-  it('when the input is null, return empty array', () => expect(groupByFirstLetter(null))
-    .to.deep.eq([]))
+  it('when the input array is empty, return empty object', () => expect(groupByFirstLetter([]))
+    .to.deep.eq({}))
+  it('when the input is non-object, return empty object', () => expect(groupByFirstLetter('nope'))
+    .to.deep.eq({}))
+  it('when the input is null, return empty object', () => expect(groupByFirstLetter(null))
+    .to.deep.eq({}))
   it('creates an object to count words by first letter', () => expect(groupByFirstLetter(input))
     .to.deep.eq(expected))
 })
