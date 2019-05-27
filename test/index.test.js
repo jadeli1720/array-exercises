@@ -1,3 +1,8 @@
+////// DO NOT MODIFY THIS FILE //////
+////// DO NOT MODIFY THIS FILE //////
+////// DO NOT MODIFY THIS FILE //////
+////// DO NOT MODIFY THIS FILE //////
+////// DO NOT MODIFY THIS FILE //////
 /* eslint-env mocha */
 if (typeof exports !== 'undefined') {
   // IGNORE: Test/Env Detection Stuff //
