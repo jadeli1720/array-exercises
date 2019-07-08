@@ -129,21 +129,27 @@ describe('countByFirstLetter()', () => {
   })
 })
 
-describe('groupByFirstLetter()', () => {
-  const input = ['cat', 'kitty', 'catzilla', 'fluffykins']
+describe("groupByFirstLetter()", () => {
+  const input = ["cat", "kitty", "catzilla", "fluffykins"]
   const expected = {
-    c: ['cat', 'catzilla'],
-    k: ['kitty'],
-    f: ['fluffykins']
+    c: ["cat", "catzilla"],
+    k: ["kitty"],
+    f: ["fluffykins"]
   }
 
-  it('groupByFirstLetter() method exists', () => { expect(groupByFirstLetter).to.exist })
-  it('when the input array is empty, return empty object', () => expect(groupByFirstLetter([]))
-    .to.deep.eq({}))
-  it('when the input is non-object, return empty object', () => expect(groupByFirstLetter('nope'))
-    .to.deep.eq({}))
-  it('when the input is null, return empty object', () => expect(groupByFirstLetter(null))
-    .to.deep.eq({}))
-  it('creates an object to count words by first letter', () => expect(groupByFirstLetter(input))
-    .to.deep.eq(expected))
+  it("groupByFirstLetter() method exists", () => {
+    expect(groupByFirstLetter).to.exist
+  })
+  it("when the input array is empty, return empty object", () => {
+    expect(groupByFirstLetter([])).to.deep.eq({})
+  })
+  it("when the input is non-object, return empty object", () => {
+    expect(groupByFirstLetter("nope")).to.deep.eq({})
+  })
+  it("when the input is null, return empty object", () => {
+    expect(groupByFirstLetter(null)).to.deep.eq({})
+  })
+  it("creates an object to count words by first letter", () => {
+    expect(groupByFirstLetter(input)).to.deep.eq(expected)
+  })
 })
