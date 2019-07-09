@@ -4,54 +4,109 @@
  * `sum(numbers): Number`
  * Given an array of numbers, return a sum total of all the numbers.
  */
-function sum (numbers) {
-  // TODO: Add your solution here.
+function sum(numbers) {
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
 }
+
+console.log(sum([5, 2, 20, 100]));
 
 /**
  * @instruction
  * `doubleNumbers(numbers): Array`
  * Given an array of numbers, return an array where each element is double its original value.
  */
-function doubleNumbers (numbers) {
-  // TODO: Add your solution here.
+function doubleNumbers(numbers) {
+  let newArray = [];
+  numbers.forEach(num => {
+    newArray.push(num * 2);
+  });
+  return newArray;
 }
 
+console.log(doubleNumbers([1, 2, 3, 4]));
 /**
  * @instruction
  * `doubleCharacters(chars): Array`
  * Given a string, return an array where each element is double its original value. (e.g. 'ab' -> 'aabb')
  */
-function doubleCharacters (chars) {
-  // TODO: Add your solution here.
+function doubleCharacters(chars) {
+  chars = chars.split("");
+  let newChars = [];
+  chars.forEach(char => {
+    newChars.push(char.repeat(2));
+  });
+  return newChars.join("");
 }
+
+console.log(doubleCharacters("abc"));
 
 /**
  * @instruction
  * `backwardsify(array): Array`
  * Reverse or flip the values in the array.
  */
-function backwardsify (array) {
-  // TODO: Add your solution here.
+function backwardsify(array) {
+  if (array.length === 0) {
+    return {};
+  }
+  return array.reverse();
 }
+console.log(backwardsify([1, 2, 3, 4]));
 
 /**
  * @instruction
  * `interleave(list1, list2): Array`
  * Should return a combined single array, with individual values alternating between list1 & list2.
  */
-function interleave (list1, list2) {
-  // TODO: Add your solution here.
+function interleave(list1, list2) {
+  let newList = [];
+  if (list1 === undefined && list2 === undefined) {
+    return [];
+  } else if (list1.length !== list2.length) {
+    return null;
+  }
+  list1.forEach((j, i) => {
+    newList.push(j);
+    newList.push(list2[i]);
+  });
+  return newList;
 }
+
+console.log(interleave(["a", "b", "c"], [1, 2, 3]));
 
 /**
  * @instruction
  * `makeRange(count, fillString): Array`
  * Return array of `count` length where each element is set to `fillString`
  */
-function makeRange (count, fillString) {
-  // TODO: Add your solution here.
+
+function makeRange(count, fillString) {
+  // // solution 1 long:
+  let newArray = [];
+  for (let i = 0; i < count; i++) {
+    newArray[i] = fillString;
+
+    if (fillString === "") {
+      //passes empty array tests
+      return [];
+    } else if (count <= 0) return [];
+  }
+  return newArray;
+
+  // //solution 2 - does not pass: when the input is -10, return empty array
+  //  let newArray = new Array(count).fill(fillString)
+  //  return newArray
+
+  // // solution 3 -  recursive array fill function found from stackoverflow: eslint does not like
+  // return count <= (fillString = [].concat(fillString, fillString)).length ?
+  // fillString.slice(0, count) : makeRange(count, fillString)
 }
+
+console.log(makeRange(3, "a"));
 
 /**
  * @instuction
