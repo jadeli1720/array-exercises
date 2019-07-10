@@ -205,9 +205,26 @@ console.log(countByFirstLetter(input))
  *
  */
 
-function groupByFirstLetter (words) {
-  // TODO: Add your solution here.
+function groupByFirstLetter(words) {
+  if (words && typeof words === 'object' ) {
+    return words.reduce((freq, word) => {
+      const firstLetter = word[0].toLowerCase()
+      //long way below using mutation
+      if (firstLetter in freq) {
+        freq[firstLetter].push(word.toLowerCase())
+      } else {
+        freq[firstLetter] = [word.toLowerCase()]
+      }
+      return freq
+    }, {});
+  } else {
+    return {}
+  }
 }
+
+const inputs = ['Cat', 'Kitty', 'catzilla', 'fluffykins']
+const result = groupByFirstLetter(inputs)
+console.log(result)
 
 /// ////// END OF CHALLENGE /////////
 /// ////// END OF CHALLENGE /////////
