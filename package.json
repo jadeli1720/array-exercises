@@ -18,10 +18,10 @@
   "dependencies": {
     "chai": "^4.2.0",
     "esm": "^3.2.25",
-    "mocha": "^6.1.4"
+    "mocha": "^6.2.3"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "lite-server": "^2.5.3"
+    "lite-server": "^2.6.1"
   }
 }
